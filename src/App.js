@@ -2,6 +2,7 @@ import React from "react";
 import ModalNew from "./components/New";
 import ModalExit from "./components/Exit";
 import Display from "./components/Display";
+import Total from "./components/Total";
 import { data, color } from "./data";
 
 class App extends React.Component {
@@ -36,8 +37,8 @@ class App extends React.Component {
     return (
       <div style={{ margin: 50 }}>
         <ModalNew {...this.state} onSubmitCar={this.onSubmitCar} />
-        <span style={{ marginRight: "20px" }} />
         <ModalExit {...this.state} onSubmitCar={this.onSubmitCar} />
+        <Total {...this.state} />
         <Display {...this.state} />
       </div>
     );
